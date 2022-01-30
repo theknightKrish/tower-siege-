@@ -10,29 +10,29 @@ function setup() {
   world = engine.world;
 
   //BOTTOM BOXES:-
-
-  box2 = new box(730,460,50,50);
-  box3 = new box(800,460,50,50);
-  box4 = new box(870,460,50,50);
-  box5 = new box(940,460,50,50);
+  box1 = new Box(660,460,50,50);
+  box2 = new Box(730,460,50,50);
+  box3 = new Box(800,460,50,50);
+  box4 = new Box(870,460,50,50);
+  box5 = new Box(940,460,50,50);
 
   //LEVEL 1:-
-  box6 = new box(695,425,50,50);
-  box7 = new box(765,425,50,50);
-  box8 = new box(835,425,50,50);
-  box9 = new box(905,425,50,50);
+  box6 = new Box(695,425,50,50);
+  box7 = new Box(765,425,50,50);
+  box8 = new Box(835,425,50,50);
+  box9 = new Box(905,425,50,50);
 
   //LEVEL 2:-
-  box10 = new box(730,365,50,50);
-  box11 = new box(800,365,50,50);
-  box12 = new box(870,365,50,50);
+  box10 = new Box(730,365,50,50);
+  box11 = new Box(800,365,50,50);
+  box12 = new Box(870,365,50,50);
 
   //LEVEL 3:-
-  box13 = new box(765,320,50,50);
-  box14 = new box(835,320,50,50);
+  box13 = new Box(765,320,50,50);
+  box14 = new Box(835,320,50,50);
 
   //TOPMOST BOX:-
-  box15 = new box(800,255,50,50);
+  box15 = new Box(800,255,50,50);
 
 
   //GROUND:-
@@ -62,7 +62,7 @@ function draw() {
   box9.display();
   box10.display();
   box11.display();
-  box12.display(); 
+  box12.display();
   box13.display();
   box14.display();
   box15.display();
@@ -72,10 +72,11 @@ function draw() {
 
 
  function mouseDragged(){
-  Matter.Body.setPosition(Ball.body, {x: mouseX, y: mouseY});
+  Matter.Body.setPosition(ball.body, {x: mouseX, y: mouseY});
  }
   
   function mouseReleased(){
     slingshot.fly();
     gameState = "launched";
   }
+
